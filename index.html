@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- EDITE AQUI: SEO e Metadados -->
+  <title>Dra. Clara Mendes | Psicologia Clínica — Atendimento Presencial e Online</title>
+  <meta name="description" content="Um espaço seguro, ético e acolhedor para psicoterapia individual. Atendimento presencial e online para adultos e jovens.">
+  <meta name="keywords" content="psicólogo, psicoterapia, terapia online, terapia presencial, saúde mental, acolhimento">
+  <meta name="author" content="Dra. Clara Mendes">
+  <meta name="robots" content="index, follow">
+
+  <!-- EDITE AQUI: Open Graph (Compartilhamento em Redes Sociais) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dra. Clara Mendes | Psicologia Clínica">
+  <meta property="og:description" content="Um espaço seguro para você se escutar e se reencontrar. Psicoterapia individual presencial e online.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Google Fonts: Fraunces & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       VARIÁVEIS E IDENTIDADE VISUAL
+       ========================================================================== */
+    :root {
+      --bg-primary: #FAF7F2;      /* Off-white acolhedor */
+      --bg-secondary: #E8DCCB;    /* Areia suave */
+      --bg-card: #FFFFFF;         /* Branco puro para contraste leve */
+      --sage: #8FA98C;            /* Verde-sálvia */
+      --sage-light: rgba(143, 169, 140, 0.16);
+      --petrol: #2F4F5A;          /* Azul-petróleo profundo */
+      --petrol-dark: #223A42;
+      --terracotta: #C97B5A;      /* Acento quente (CTAs) */
+      --terracotta-hover: #B56949;
+      --text-main: #2A363B;       /* Texto principal com alto contraste */
+      --text-muted: #55656B;      /* Texto secundário */
+      --border-soft: rgba(47, 79, 90, 0.12);
+      --whatsapp: #25D366;
+      --whatsapp-hover: #20BD5A;
+
+      --font-serif: 'Fraunces', Georgia, serif;
+      --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --shadow-soft: 0 12px 32px -8px rgba(47, 79, 90, 0.08);
+      --shadow-hover: 0 18px 40px -10px rgba(47, 79, 90, 0.14);
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* ==========================================================================
+       RESET E BASE
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Acessibilidade: foco visível */
+    :focus-visible {
+      outline: 3px solid var(--terracotta);
+      outline-offset: 3px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      color: var(--petrol);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 4.5rem 0;
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding: 6.5rem 0;
+      }
+    }
+
+    /* ==========================================================================
+       BOTÕES
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.95rem 1.85rem;
+      border-radius: 50px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--terracotta);
+      color: #FFFFFF;
+      box-shadow: 0 8px 20px -4px rgba(201, 123, 90, 0.45);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--terracotta-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -4px rgba(201, 123, 90, 0.55);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--petrol);
+      border-color: var(--petrol);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--petrol);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 0.65rem 1.35rem;
+      font-size: 0.925rem;
+    }
+
+    /* ==========================================================================
+       1. HEADER FIXO E DISCRETO
+       ========================================================================== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-soft);
+      transition: var(--transition);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--petrol);
+      line-height: 1.1;
+    }
+
+    .logo-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .nav-desktop {
+      display: none;
+      align-items: center;
+      gap: 2.25rem;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-main);
+      position: relative;
+      padding: 0.25rem 0;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--sage);
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--petrol);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--petrol);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .hamburger[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      background-color: var(--bg-primary);
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border-soft);
+      gap: 1.25rem;
+    }
+
+    .nav-mobile.is-open {
+      display: flex;
+    }
+
+    .nav-mobile .nav-link {
+      font-size: 1.1rem;
+      padding: 0.4rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .nav-desktop {
+        display: flex;
+      }
+      .hamburger, .nav-mobile {
+        display: none !important;
+      }
+    }
+
+    /* ==========================================================================
+       2. HERO
+       ========================================================================== */
+    .hero {
+      padding-top: 7.5rem;
+      padding-bottom: 4.5rem;
+    }
+
+    @media (min-width: 992px) {
+      .hero {
+        padding-top: 9.5rem;
+        padding-bottom: 6.5rem;
+      }
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 4rem;
+      }
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background-color: var(--sage-light);
+      color: var(--petrol);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title {
+      font-size: clamp(2.15rem, 4.5vw, 3.35rem);
+      margin-bottom: 1.25rem;
+      color: var(--petrol);
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-bottom: 2.25rem;
+      max-width: 540px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (min-width: 540px) {
+      .hero-actions {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .trust-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--sage);
+      flex-shrink: 0;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* Moldura orgânica suave */
+    .hero-image-backdrop {
+      position: absolute;
+      inset: -14px;
+      background-color: var(--bg-secondary);
+      border-radius: 44% 56% 48% 52% / 54% 44% 56% 46%;
+      z-index: 0;
+      transform: rotate(-3deg);
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 42% 58% 46% 54% / 52% 46% 54% 48%;
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* ==========================================================================
+       3. PRINCÍPIOS ("Como eu trabalho")
+       ========================================================================== */
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sage);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .principles-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    .principle-card {
+      background-color: var(--bg-card);
+      padding: 2rem 1.75rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+    }
+
+    .principle-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(143, 169, 140, 0.5);
+    }
+
+    .principle-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background-color: var(--sage-light);
+      color: var(--petrol);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .principle-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .principle-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .principle-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       4. GALERIA DE IMAGENS (Ambiente Terapêutico)
+       ========================================================================== */
+    .gallery-section {
+      padding-top: 1.5rem;
+      padding-bottom: 4.5rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75rem;
+      }
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      aspect-ratio: 4 / 3;
+      background-color: var(--bg-secondary);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ==========================================================================
+       5. AGENDAR CONSULTA
+       ========================================================================== */
+    .booking-section {
+      background-color: var(--bg-secondary);
+      position: relative;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (min-width: 992px) {
+      .booking-grid {
+        grid-template-columns: 1fr 1.05fr;
+        gap: 4rem;
+      }
+    }
+
+    .booking-info .section-title {
+      margin-bottom: 1rem;
+    }
+
+    .booking-info > p {
+      color: var(--text-main);
+      margin-bottom: 2.25rem;
+      font-size: 1.05rem;
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: var(--petrol);
+      color: #FFFFFF;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-content h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-content p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+    }
+
+    .booking-card {
+      background-color: var(--bg-primary);
+      padding: 2rem 1.75rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+    }
+
+    @media (min-width: 640px) {
+      .booking-card {
+        padding: 2.75rem;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--petrol);
+      margin-bottom: 0.45rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: var(--text-main);
+      background-color: #FFFFFF;
+      border: 1.5px solid rgba(47, 79, 90, 0.2);
+      border-radius: var(--radius-sm);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--petrol);
+      box-shadow: 0 0 0 3px rgba(47, 79, 90, 0.12);
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 0.75rem;
+      padding: 1.05rem 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.9rem;
+    }
+
+    /* ==========================================================================
+       6. FOOTER
+       ========================================================================== */
+    .footer {
+      background-color: var(--petrol);
+      color: rgba(250, 247, 242, 0.88);
+      padding: 4rem 0 5.5rem; /* Espaço extra inferior para não conflitar com botão flutuante no mobile */
+    }
+
+    @media (min-width: 768px) {
+      .footer {
+        padding-bottom: 3.5rem;
+      }
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(250, 247, 242, 0.15);
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+      }
+    }
+
+    .footer-brand h3 {
+      color: #FAF7F2;
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-crp {
+      font-size: 0.9rem;
+      color: var(--bg-secondary);
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    .footer-city {
+      font-size: 0.92rem;
+      opacity: 0.85;
+    }
+
+    .footer-heading {
+      color: #FAF7F2;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .footer-links a {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      transition: opacity 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 0.84rem;
+      opacity: 0.85;
+    }
+
+    .emergency-notice {
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 0.9rem 1.15rem;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--sage);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       BOTÃO WHATSAPP FLUTUANTE
+       ========================================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      width: 60px;
+      height: 60px;
+      background-color: var(--whatsapp);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      z-index: 990;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .whatsapp-float::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background-color: var(--whatsapp);
+      z-index: -1;
+      animation: pulse-whatsapp 2.4s infinite;
+    }
+
+    .whatsapp-float:hover {
+      background-color: var(--whatsapp-hover);
+      transform: scale(1.08);
+    }
+
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    @keyframes pulse-whatsapp {
+      0% {
+        transform: scale(1);
+        opacity: 0.65;
+      }
+      70% {
+        transform: scale(1.42);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1.42);
+        opacity: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .whatsapp-float::before {
+        animation: none;
+      }
+    }
+
+    /* ==========================================================================
+       ANIMAÇÕES DE SCROLL (FADE-IN)
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. HEADER FIXO
+       ======================================================================== -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo" aria-label="Ir para o início">
+        <!-- EDITE AQUI: Nome e subtítulo do profissional -->
+        <span class="logo-name">Dra. Clara Mendes</span>
+        <span class="logo-sub">Psicologia Clínica</span>
+      </a>
+
+      <!-- Navegação Desktop -->
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#principios" class="nav-link">Princípios</a>
+        <a href="#agendar" class="nav-link">Agendar</a>
+        <a href="#agendar" class="btn btn-primary btn-sm">Agendar consulta</a>
+      </nav>
+
+      <!-- Botão Menu Mobile -->
+      <button class="hamburger" id="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Navegação Mobile -->
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Navegação mobile">
+      <a href="#inicio" class="nav-link mobile-link">Início</a>
+      <a href="#principios" class="nav-link mobile-link">Princípios</a>
+      <a href="#agendar" class="nav-link mobile-link">Agendar</a>
+      <a href="#agendar" class="btn btn-primary mobile-link">Agendar consulta</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         2. HERO
+         ====================================================================== -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="hero-tag">Psicoterapia Individual • Presencial e Online</span>
+          <h1 class="hero-title">Um espaço seguro para você se escutar e se reencontrar.</h1>
+          <p class="hero-subtitle">
+            Atendimento psicológico acolhedor, ético e sem julgamentos para atravessar momentos difíceis, compreender suas emoções e construir novos caminhos no seu próprio tempo.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#agendar" class="btn btn-primary">Agendar minha consulta</a>
+            <!-- EDITE AQUI: Substitua 5500000000000 pelo seu número com DDD (ex: 5528999999999) -->
+            <a href="https://wa.me/5527996497213?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Falar no WhatsApp
+            </a>
+          </div>
+
+          <div class="trust-badges">
+            <!-- EDITE AQUI: Seu número de registro no CRP -->
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+              <span>CRP 00/00000</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+              <span>Atendimento online e presencial</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+              <span>Primeira conversa sem compromisso</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper reveal">
+          <div class="hero-image-backdrop" aria-hidden="true"></div>
+          <!-- EDITE AQUI: URL da sua foto profissional ou foto do consultório -->
+          <img
+            src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=900&q=85"
+            alt="Psicóloga sorrindo suavemente em um ambiente iluminado e acolhedor"
+            class="hero-image"
+            width="480"
+            height="600"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. PRINCÍPIOS ("Como eu trabalho")
+         ====================================================================== -->
+    <section id="principios">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Princípios</span>
+          <h2 class="section-title">Como eu trabalho</h2>
+          <p class="section-desc">
+            A terapia é uma construção conjunta. Cada encontro é guiado por valores que garantem segurança, respeito e profundidade ao seu processo.
+          </p>
+        </div>
+
+        <div class="principles-grid">
+          <!-- Card 1 -->
+          <article class="principle-card reveal">
+            <div class="principle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="principle-title">Acolhimento sem julgamento</h3>
+            <p class="principle-text">
+              Um ambiente livre de críticas ou rótulos, onde você pode falar abertamente sobre suas dores, dúvidas e contradições.
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="principle-card reveal">
+            <div class="principle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="principle-title">Sigilo absoluto</h3>
+            <p class="principle-text">
+              Tudo o que é compartilhado nas sessões é protegido pelo sigilo profissional, garantindo total privacidade e confiança.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="principle-card reveal">
+            <div class="principle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="principle-title">Ética profissional</h3>
+            <p class="principle-text">
+              Atuação rigorosamente alinhada ao Código de Ética do Psicólogo, com responsabilidade, transparência e compromisso humano.
+            </p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="principle-card reveal">
+            <div class="principle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h3 class="principle-title">Escuta ativa e empática</h3>
+            <p class="principle-text">
+              Atenção genuína à sua história, ajudando você a perceber padrões, dar nome ao que sente e ampliar sua própria compreensão.
+            </p>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="principle-card reveal">
+            <div class="principle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="principle-title">Respeito ao seu ritmo</h3>
+            <p class="principle-text">
+              Não existem respostas prontas nem pressa. Cada pessoa tem seu próprio tempo para elaborar experiências e amadurecer escolhas.
+            </p>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="principle-card reveal">
+            <div class="principle-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <h3 class="principle-title">Prática fundamentada</h3>
+            <p class="principle-text">
+              Estudo contínuo, supervisão clínica e métodos respaldados pela psicologia científica, adaptados à sua singularidade.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. IMAGENS (Ambiente Terapêutico)
+         ====================================================================== -->
+    <section class="gallery-section" aria-label="Ambiente terapêutico">
+      <div class="container">
+        <div class="gallery-grid">
+          <!-- EDITE AQUI: Troque as URLs abaixo pelas fotos reais do seu consultório, se desejar -->
+          <div class="gallery-item reveal">
+            <img
+              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80"
+              alt="Poltrona confortável em tons neutros iluminada pela luz natural da janela"
+              loading="lazy"
+            >
+          </div>
+          <div class="gallery-item reveal">
+            <img
+              src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+              alt="Caderno de anotações aberto sobre mesa de madeira clara com plantas ao fundo"
+              loading="lazy"
+            >
+          </div>
+          <div class="gallery-item reveal">
+            <img
+              src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=80"
+              alt="Xícara de chá quente em ambiente calmo e aconchegante para pausa e reflexão"
+              loading="lazy"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. AGENDAR CONSULTA
+         ====================================================================== -->
+    <section id="agendar" class="booking-section">
+      <div class="container booking-grid">
+        <div class="booking-info reveal">
+          <span class="section-eyebrow" style="color: var(--petrol);">Primeiro passo</span>
+          <h2 class="section-title">Pronto para começar sua jornada?</h2>
+          <p>
+            Dar o primeiro passo nem sempre é fácil, por isso o agendamento é simples, direto e humano. Preencha os dados ao lado e continuaremos nossa conversa pelo WhatsApp.
+          </p>
+
+          <ol class="steps-list">
+            <li class="step-item">
+              <span class="step-number">1</span>
+              <div class="step-content">
+                <h3>Chame no WhatsApp</h3>
+                <p>Envie suas preferências pelo formulário ao lado ou mande uma mensagem direta.</p>
+              </div>
+            </li>
+            <li class="step-item">
+              <span class="step-number">2</span>
+              <div class="step-content">
+                <h3>Escolha o melhor horário</h3>
+                <p>Alinhamos juntos a disponibilidade para atendimento presencial ou online.</p>
+              </div>
+            </li>
+            <li class="step-item">
+              <span class="step-number">3</span>
+              <div class="step-content">
+                <h3>Comece sua jornada</h3>
+                <p>Realizamos nosso primeiro encontro para nos conhecermos e entender suas necessidades.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="booking-card reveal">
+          <form id="whatsapp-form">
+            <div class="form-group">
+              <label for="nome" class="form-label">Seu nome</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                class="form-control"
+                placeholder="Como você gostaria de ser chamado(a)?"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="telefone" class="form-label">Seu telefone / WhatsApp</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                class="form-control"
+                placeholder="(00) 00000-0000"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="modalidade" class="form-label">Modalidade de atendimento</label>
+              <select id="modalidade" name="modalidade" class="form-control" required>
+                <option value="Online (Videochamada)">Online (Videochamada)</option>
+                <option value="Presencial">Presencial</option>
+                <option value="Ainda não tenho certeza">Ainda não tenho certeza</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="horario" class="form-label">Melhor período para atendimento</label>
+              <select id="horario" name="horario" class="form-control" required>
+                <option value="Manhã">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noite">Noite</option>
+                <option value="Horário flexível">Horário flexível</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              Agendar pelo WhatsApp
+            </button>
+            <p class="form-note">Suas informações são confidenciais e usadas apenas para contato.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       6. FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <!-- EDITE AQUI: Nome, CRP e Cidade/Estado -->
+          <h3>Dra. Clara Mendes</h3>
+          <p class="footer-crp">Psicóloga Clínica • CRP 00/00000</p>
+          <p class="footer-city">Atendimento presencial em São Paulo – SP e online para todo o Brasil.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#principios">Princípios</a></li>
+            <li><a href="#agendar">Agendar consulta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contato & Redes</h4>
+          <ul class="footer-links">
+            <li>
+              <!-- EDITE AQUI: Seu link e @ do Instagram -->
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil no Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                <span>@psi.claramendes</span>
+              </a>
+            </li>
+            <li>
+              <!-- EDITE AQUI: Seu número do WhatsApp -->
+              <a href="https://wa.me/5527996497213?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
+                WhatsApp: (00) 00000-0000
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="emergency-notice" role="note">
+          <strong>Atenção:</strong> Este site não oferece atendimento de urgência ou emergência. Em caso de crise emocional ou risco de suicídio, ligue gratuitamente para o <strong>CVV (Centro de Valorização da Vida) pelo número 188</strong> (atendimento 24h) ou procure o hospital mais próximo.
+        </div>
+        <p>&copy; <span id="current-year"></span> Dra. Clara Mendes. Todos os direitos reservados.</p>
+        <P>CRIADO E DESENVOLVIDO POR PEDRO PIERRI</P>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       BOTÃO WHATSAPP FLUTUANTE
+       ======================================================================== -->
+  <!-- EDITE AQUI: Substitua 5500000000000 pelo seu número de WhatsApp com DDI e DDD -->
+  <a
+    href="https://wa.me/5527996497213?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Agendar consulta pelo WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16.004 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.256.59 4.458 1.71 6.398L3.1 29.02l6.794-1.782a12.74 12.74 0 0 0 6.11 1.556h.006c7.058 0 12.798-5.74 12.798-12.8 0-3.42-1.332-6.636-3.75-9.054A12.716 12.716 0 0 0 16.004 3.2zm0 23.432h-.004a10.61 10.61 0 0 1-5.408-1.48l-.388-.23-4.032 1.058 1.076-3.93-.252-.402a10.585 10.585 0 0 1-1.624-5.648c0-5.862 4.77-10.632 10.636-10.632 2.84 0 5.51 1.106 7.518 3.116a10.562 10.562 0 0 1 3.114 7.52c0 5.864-4.772 10.628-10.632 10.628zm5.832-7.962c-.32-.16-1.892-.934-2.186-1.04-.292-.106-.506-.16-.718.16-.214.32-.826 1.04-1.012 1.254-.186.214-.372.24-.692.08-.32-.16-1.35-.498-2.572-1.588-.95-.848-1.592-1.896-1.778-2.216-.186-.32-.02-.492.14-.652.144-.144.32-.374.48-.56.16-.186.214-.32.32-.534.106-.214.054-.4-.026-.56-.08-.16-.718-1.732-.984-2.372-.26-.624-.524-.54-.718-.55l-.612-.01c-.214 0-.56.08-.852.4-.294.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.308.16.214 2.256 3.444 5.466 4.83.764.33 1.36.526 1.824.674.766.244 1.464.21 2.016.128.614-.092 1.892-.774 2.158-1.52.266-.748.266-1.388.186-1.52-.08-.134-.294-.214-.614-.374z"/>
+    </svg>
+  </a>
+
+  <!-- ========================================================================
+       JAVASCRIPT INLINE
+       ======================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Atualiza o ano automaticamente no footer
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      // 2. Controle do Menu Mobile
+      const menuToggle = document.getElementById('menu-toggle');
+      const navMobile = document.getElementById('nav-mobile');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      if (menuToggle && navMobile) {
+        menuToggle.addEventListener('click', () => {
+          const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+          navMobile.classList.toggle('is-open');
+        });
+
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            navMobile.classList.remove('is-open');
+          });
+        });
+      }
+
+      // 3. Animações sutis de fade-in ao rolar (IntersectionObserver)
+      const revealElements = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => observer.observe(el));
+      } else {
+        revealElements.forEach(el => el.classList.add('is-visible'));
+      }
+
+      // 4. Máscara simples de telefone no formulário
+      const phoneInput = document.getElementById('telefone');
+      if (phoneInput) {
+        phoneInput.addEventListener('input', (e) => {
+          let value = e.target.value.replace(/\D/g, '');
+          if (value.length > 11) value = value.slice(0, 11);
+          if (value.length > 6) {
+            value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+          } else if (value.length > 2) {
+            value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+          } else if (value.length > 0) {
+            value = `(${value}`;
+          }
+          e.target.value = value;
+        });
+      }
+
+      // 5. Envio do formulário montando mensagem personalizada para o WhatsApp
+      const whatsappForm = document.getElementById('whatsapp-form');
+      if (whatsappForm) {
+        whatsappForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          // EDITE AQUI: Coloque o número do seu WhatsApp apenas com dígitos (DDI + DDD + Número)
+          const whatsappNumber = '5527996497213';
+
+          const nome = document.getElementById('nome').value.trim();
+          const telefone = document.getElementById('telefone').value.trim();
+          const modalidade = document.getElementById('modalidade').value;
+          const horario = document.getElementById('horario').value;
+
+          const mensagem = `Olá! Gostaria de agendar uma consulta.\n\n` +
+            `*Nome:* ${nome}\n` +
+            `*Telefone:* ${telefone}\n` +
+            `*Modalidade:* ${modalidade}\n` +
+            `*Melhor período:* ${horario}`;
+
+          const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensagem)}`;
+          window.open(url, '_blank', 'noopener,noreferrer');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
